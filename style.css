@@ -1,0 +1,1940 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:white;
+
+}
+
+
+
+/* COVER */
+
+.cover{
+
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:220vh;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.65)
+        ),
+        url("prewed2.png");
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-size:initial;
+
+    z-index:9999;
+
+    transition:
+        transform 1.4s cubic-bezier(.22,1,.36,1),
+        opacity .8s ease;
+
+}
+
+
+.cover::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:inherit;
+
+    z-index:-1;
+
+    transform:scale(1);
+
+    transition:transform 1.5s ease;
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(212,175,55,.12),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,255,255,.08),
+    transparent 40%);
+
+}
+
+/* Cahaya */
+
+.cover-shine{
+
+    position:absolute;
+
+    top:-20%;
+
+    left:-120%;
+
+    width:40%;
+
+    height:150%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.25),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    pointer-events:none;
+
+}
+
+/* Isi Cover */
+
+.content{
+
+    transition:
+
+        transform .9s ease,
+
+        opacity .9s ease;
+
+}
+
+/* Saat membuka */
+
+.cover.hide::before{
+
+    transform:scale(1.08);
+
+}
+
+.cover.hide .content{
+
+    opacity:0;
+
+    transform:translateY(-50px);
+
+}
+
+.cover.hide .cover-shine{
+
+    animation:shineMove 1.3s ease;
+
+}
+
+/* Animasi naik */
+
+.cover.hide{
+
+    transform:translateY(-110%);
+
+}
+
+/* Welcome muncul */
+
+#welcome{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1.2s ease;
+
+}
+
+#welcome.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+@keyframes shineMove{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:160%;
+
+}
+
+}
+
+#openInvitation{
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-2px);
+
+}
+
+#openInvitation:active{
+
+    transform:scale(.95);
+
+}
+
+/* CONTENT */
+
+.content{
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+color:white;
+
+animation:fadeUp 2s ease;
+
+}
+
+
+
+.gunungan{
+
+width:130px;
+
+margin-bottom:20px;
+
+filter:drop-shadow(0 0 10px #d4af37);
+
+}
+
+
+
+.content h3{
+
+font-size:18px;
+
+letter-spacing:3px;
+
+font-weight:300;
+
+}
+
+
+
+.content h1{
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+font-size:80px;
+
+font-weight:700;
+
+margin:20px 0;
+
+}
+
+.person img{
+
+
+transition:.5s;
+
+
+}
+
+
+
+.person img:hover{
+
+
+transform:
+
+scale(1.08);
+
+
+box-shadow:
+
+0 20px 50px rgba(212,175,55,.5);
+
+
+}
+
+.gold-text{
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #fff2a8,
+        #c89b3c
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.content h1 span{
+
+color:#d4af37;
+
+}
+
+
+
+.line{
+
+height:1px;
+
+width:200px;
+
+background:#d4af37;
+
+margin:auto;
+
+}
+
+
+
+
+.content p{
+
+margin-top:30px;
+
+font-size:14px;
+
+}
+
+
+
+.content h2{
+
+font-family:
+'Cormorant Garamond';
+
+font-size:35px;
+
+margin:10px;
+
+}
+
+
+
+
+button{
+
+cursor:pointer;
+
+}
+
+
+
+#openInvitation{
+
+    background:#D4AF37;
+
+    color:white;
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:16px 40px;
+
+    font-size:20px;
+
+    transition:.35s;
+
+    box-shadow:
+    
+
+        0 10px 25px rgba(212,175,55,.35);
+
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.couple-name{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:50px;
+
+    color:#D4AF37;
+
+    text-shadow:
+
+        2px 2px 8px rgba(0,0,0,.45);
+
+}
+
+
+/* SECTION */
+
+
+.welcome{
+
+padding:80px 20px;
+
+text-align:center;
+
+}
+
+
+
+.welcome h2{
+
+
+font-family:'Cormorant Garamond';
+font-size:40px;
+
+}
+
+
+
+.welcome p{
+
+max-width:700px;
+
+margin:20px auto;
+
+line-height:2;
+
+}
+
+
+
+
+
+/* ANIMATION */
+
+
+@keyframes fadeUp{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:768px){
+
+
+    .couple-name{
+        font-size: 50px;
+    }
+
+
+.content h1{
+
+font-size:55px;
+
+}
+
+
+.gunungan{
+
+width:100px;
+
+}
+
+
+.content h2{
+
+font-size:28px;
+
+}
+
+}
+
+/* =====================
+AYAT SECTION
+===================== */
+
+
+.ayat{
+
+
+position:relative;
+
+padding:100px 20px;
+
+text-align:center;
+
+background:#fffaf2;
+
+overflow:hidden;
+
+}
+
+
+
+.ayat h2{
+
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+
+font-size:45px;
+
+margin-bottom:30px;
+
+color:#8b6b32;
+
+
+}
+
+
+
+.ayat p{
+
+
+max-width:700px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:2;
+
+font-style:italic;
+
+
+}
+
+
+
+.ayat span{
+
+
+display:block;
+
+margin-top:20px;
+
+color:#b08b3c;
+
+
+}
+
+
+
+
+
+
+/* =====================
+COUPLE SECTION
+===================== */
+
+
+.couple{
+
+
+padding:100px 20px;
+
+background:#fffaf2;
+
+text-align:center;
+
+
+}
+
+
+
+.couple h1{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:60px;
+
+color:#8b6b32;
+
+margin-bottom:60px;
+
+
+}
+
+
+
+
+
+.couple-container{
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:50px;
+
+
+}
+
+
+
+
+
+.person{
+
+
+width:300px;
+
+
+}
+
+
+
+.person img{
+
+
+width:250px;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+
+border:5px solid #d4af37;
+
+
+padding:8px;
+
+
+}
+
+
+
+
+
+.person h2{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:40px;
+
+margin-top:25px;
+
+
+}
+
+
+
+
+.person p{
+
+
+line-height:1.5;
+
+color:#555;
+
+
+}
+
+
+
+
+
+.heart{
+
+
+font-size:45px;
+
+color:#c89b3c;
+
+
+
+}
+
+
+
+
+
+
+/* =====================
+SCROLL ANIMATION
+===================== */
+
+
+
+.reveal{
+
+
+opacity:0;
+
+transform:
+translateY(60px);
+
+transition:
+1s;
+
+
+}
+
+
+.reveal.active{
+
+
+opacity:1;
+
+transform:
+translateY(0);
+
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:768px){
+
+
+    .cover{
+
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.65)
+        ),
+        url("prewed2.png");
+
+    background-size: cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    z-index:9999;
+
+    transition:
+        transform 1.4s cubic-bezier(.22,1,.36,1),
+        opacity .8s ease;
+
+}
+
+.couple-container{
+
+
+flex-direction:column;
+
+
+}
+
+
+
+.couple h1{
+
+font-size:45px;
+
+}
+
+
+
+.person img{
+
+
+width:220px;
+
+height:220px;
+
+
+}
+
+
+
+.heart{
+
+
+margin:20px;
+
+}
+
+
+}
+
+/* ======================
+LOVE STORY
+====================== */
+
+
+.story{
+
+padding:100px 20px;
+
+background:#fffaf2;
+
+text-align:center;
+
+}
+
+
+.story h1{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:60px;
+
+color:#8b6b32;
+
+
+}
+
+
+
+.subtitle{
+
+margin:20px auto 70px;
+
+color:#777;
+
+}
+
+
+
+
+.timeline{
+
+
+position:relative;
+
+max-width:800px;
+
+margin:auto;
+
+
+}
+
+
+
+.timeline::before{
+
+
+content:"";
+
+position:absolute;
+
+width:2px;
+
+background:#d4af37;
+
+height:100%;
+
+left:50%;
+
+
+}
+
+
+
+
+
+.story-item{
+
+
+display:flex;
+
+justify-content:center;
+
+position:relative;
+
+margin-bottom:70px;
+
+
+}
+
+
+
+.circle{
+
+
+width:55px;
+
+height:55px;
+
+background:#d4af37;
+
+color:white;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:2;
+
+
+}
+
+
+
+
+
+.story-card{
+
+
+background:white;
+
+width:350px;
+
+padding:30px;
+
+margin-left:30px;
+
+border-radius:15px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.story-card h2{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:35px;
+
+
+}
+
+
+
+.story-card span{
+
+
+color:#c89b3c;
+
+}
+
+
+
+
+.story-card p{
+
+
+line-height:1.8;
+
+color:#555;
+
+
+}
+
+
+
+
+
+
+
+
+/* ======================
+COUNTDOWN
+====================== */
+
+
+.countdown{
+
+
+padding:100px 20px;
+
+background:
+
+linear-gradient(
+135deg,
+#4b3a28,
+#1e1a15
+);
+
+color:white;
+
+text-align:center;
+
+
+}
+
+
+
+.countdown h1{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:60px;
+
+margin-bottom:60px;
+
+
+}
+
+
+
+
+
+.count-container{
+
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+
+}
+
+
+
+.count-container div{
+
+
+width:130px;
+
+height:130px;
+
+border:1px solid #d4af37;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+border-radius:15px;
+
+
+}
+
+
+
+
+.count-container h2{
+
+
+font-size:45px;
+
+color:#d4af37;
+
+
+}
+
+
+
+
+
+/* ======================
+FLOWER ANIMATION
+====================== */
+
+
+.flower{
+
+
+position:fixed;
+
+top:-50px;
+
+width:30px;
+
+animation:fall linear infinite;
+
+z-index:10;
+
+pointer-events:none;
+
+
+}
+
+
+
+
+
+@keyframes fall{
+
+
+0%{
+
+transform:
+translateY(-100px)
+rotate(0deg);
+
+}
+
+
+100%{
+
+transform:
+translateY(110vh)
+rotate(360deg);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:768px){
+
+
+.timeline::before{
+
+left:20px;
+
+}
+
+
+
+.story-item{
+
+justify-content:flex-start;
+
+}
+
+
+.circle{
+
+margin-left:0;
+
+}
+
+
+
+.story-card{
+
+
+width:calc(100% - 80px);
+
+margin-left:20px;
+
+
+}
+
+
+
+.count-container{
+
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+
+}
+
+
+.count-container div{
+
+
+width:120px;
+
+height:120px;
+
+
+}
+
+
+
+}
+
+/* =====================
+EVENT SECTION
+===================== */
+
+
+.event{
+
+padding:100px 20px;
+
+background:#f8f5ef;
+
+text-align:center;
+
+}
+
+
+
+.event h1{
+
+font-family:
+'Cormorant Garamond';
+
+font-size:60px;
+
+color:#8b6b32;
+
+}
+
+
+
+.event-subtitle{
+
+max-width:600px;
+
+margin:20px auto 60px;
+
+color:#666;
+
+line-height:2;
+
+}
+
+
+
+
+
+.event-container{
+
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+
+
+.event-card{
+
+
+background:white;
+
+width:350px;
+
+padding:40px 30px;
+
+border-radius:20px;
+
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.08);
+
+
+border-top:
+
+3px solid #d4af37;
+
+
+}
+
+
+
+
+
+.icon{
+
+
+font-size:40px;
+
+color:#d4af37;
+
+}
+
+
+
+.event-card h2{
+
+
+font-family:
+
+'Cormorant Garamond';
+
+font-size:40px;
+
+
+}
+
+
+
+
+.event-card h3{
+
+
+margin-top:20px;
+
+color:#8b6b32;
+
+
+}
+
+
+
+.event-card p{
+
+
+line-height:2;
+
+color:#555;
+
+}
+
+
+
+.event-card hr{
+
+
+margin:25px 0;
+
+border:none;
+
+border-top:
+
+1px solid #ddd;
+
+
+}
+
+
+
+
+
+.maps{
+
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:12px 30px;
+
+background:#d4af37;
+
+color:white;
+
+border-radius:30px;
+
+text-decoration:none;
+
+
+}
+
+
+
+.maps:hover{
+
+
+background:#8b6b32;
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.event-card{
+
+width:100%;
+
+max-width:350px;
+
+
+}
+
+
+}
+
+/* =====================
+GALLERY
+===================== */
+
+
+.gallery{
+
+
+padding:100px 20px;
+
+background:#fffaf2;
+
+text-align:center;
+
+
+}
+
+
+
+.gallery h1{
+
+
+font-family:
+
+'Cormorant Garamond';
+
+font-size:60px;
+
+color:#8b6b32;
+
+
+}
+
+
+
+.gallery p{
+
+
+margin-bottom:50px;
+
+color:#777;
+
+
+}
+
+
+
+
+.gallery-container{
+
+
+max-width:1100px;
+
+margin: 10px;
+
+overflow-x: hidden;
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+
+gap:20px;
+justify-content: center;
+margin-left: 50px;
+}
+
+
+
+
+.gallery-container img{
+
+    justify-content: center;
+max-width: 100%;
+
+transition:.6s;
+
+
+cursor:pointer;
+
+
+filter:
+
+brightness(.9);
+
+
+}
+
+
+
+.gallery-container img:hover{
+
+
+transform:
+
+translateY(-10px)
+scale(1.03);
+
+
+filter:
+
+brightness(1);
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.gallery-container{
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+}
+
+
+
+.gallery-container img{
+
+
+height:200px;
+
+}
+
+}
+
+/* =====================
+WEDDING GIFT
+===================== */
+
+
+.gift{
+
+
+padding:100px 20px;
+
+background:#f8f5ef;
+
+text-align:center;
+
+
+}
+
+
+
+.gift h1{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:60px;
+
+color:#8b6b32;
+
+
+}
+
+
+
+.gift>p{
+
+
+max-width:600px;
+
+margin:30px auto 60px;
+
+line-height:2;
+
+color:#666;
+
+
+}
+
+
+
+
+
+.bank-card{
+
+
+background:white;
+
+max-width:400px;
+
+margin:30px auto;
+
+padding:40px;
+
+border-radius:20px;
+
+border-top:3px solid #d4af37;
+
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+
+.bank-card h2{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:40px;
+
+
+}
+
+
+
+
+.bank-card h3{
+
+
+font-size:28px;
+
+letter-spacing:2px;
+
+margin:20px;
+
+
+}
+
+
+
+
+
+.bank-card button{
+
+
+background:#d4af37;
+
+border:none;
+
+color:white;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+
+}
+
+footer{
+
+
+padding:100px 20px;
+
+background:#3b3025;
+
+color:white;
+
+text-align:center;
+
+
+}
+
+
+footer h1{
+
+
+font-family:
+'Cormorant Garamond';
+
+font-size:60px;
+
+
+}
+
+
+
+footer h2{
+
+
+color:#d4af37;
+
+margin-top:30px;
+
+
+}
+
+/* ===================================
+   NAVBAR
+=================================== */
+
+.navbar{
+
+    pointer-events:auto;
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:rgba(123, 103, 1, 0.505);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:60px;
+
+    padding:15px 30px;
+
+    z-index:999;
+
+    transition:.4s;
+
+}
+
+.navbar ul{
+
+    display:flex;
+
+    gap:25px;
+
+    list-style:none;
+
+}
+
+.navbar a{
+
+    color:black;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#fefefe;
+
+}
+
+.nav-link.active{
+
+    color:#ffffff;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.navbar {
+
+    pointer-events:auto;
+
+    position:fixed;
+
+    bottom:1px;
+
+    left: 50%;
+
+    transform:translateX(-50%);
+
+    background:rgba(123, 103, 1, 0.505);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:60px;
+
+    padding: 10px 15px;
+
+    z-index:999;
+
+    transition:.4s;
+}
+}
+
+.navbar ul{
+
+    display:flex;
+
+    gap:25px;
+
+    list-style:none;
+
+}
+
+.navbar a{
+
+    color:black;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#fefefe;
+
+}
+
+.nav-link.active{
+
+    color:#ffffff;
+
+}
+
+
+section{
+
+
+position:relative;
+
+
+}
+
+
+
+section::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+bottom:-1px;
+
+
+left:0;
+
+
+width:100%;
+
+
+height:80px;
+
+
+background:
+
+linear-gradient(
+
+transparent,
+
+rgba(248,245,239,.8)
+
+);
+
+
+pointer-events:none;
+
+
+}
