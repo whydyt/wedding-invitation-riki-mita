@@ -826,7 +826,6 @@ translateY(0);
 
 flex-direction:column;
 display: relative;
-margin: auto;
 
 
 }
@@ -1258,9 +1257,10 @@ margin-left:20px;
 
 
 display:grid;
+align-items: center;
 
 grid-template-columns:
-repeat(2,1fr);
+repeat(2,0fr);
 
 
 }
@@ -1271,7 +1271,7 @@ repeat(2,1fr);
 
 width:100px;
 
-height:120px;
+height:100px;
 
 
 }
