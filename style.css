@@ -826,6 +826,7 @@ translateY(0);
 
 flex-direction:column;
 display: relative;
+margin: auto;
 
 
 }
@@ -1268,7 +1269,7 @@ repeat(2,1fr);
 .count-container div{
 
 
-width:120px;
+width:100px;
 
 height:120px;
 
@@ -1481,6 +1482,10 @@ width:100%;
 max-width:350px;
 
 
+}
+
+.section{
+    margin: auto;
 }
 
 
