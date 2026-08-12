@@ -1270,6 +1270,7 @@ repeat(2,0fr);
 
 
 width:100px;
+padding: 0;
 
 height:100px;
 
@@ -1485,7 +1486,7 @@ max-width:350px;
 }
 
 .section{
-    margin: auto;
+    margin-left: auto;
 }
 
 
