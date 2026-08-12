@@ -1248,19 +1248,23 @@ width:calc(100% - 80px);
 
 margin-left:20px;
 
+}
 
+.countdown{
+    margin-left: 0px;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 .count-container{
-
-
 display:grid;
 align-items: center;
-
 grid-template-columns:
 repeat(2,0fr);
+
+
 
 
 }
