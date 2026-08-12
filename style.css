@@ -826,6 +826,7 @@ translateY(0);
 
 flex-direction:column;
 display: relative;
+margin-left: -15px;
 
 
 }
@@ -1251,9 +1252,10 @@ margin-left:20px;
 }
 
 .countdown{
-    margin-left: 0px;
+    margin-left: -25px;
     justify-content: center;
     align-items: center;
+
 }
 
 
