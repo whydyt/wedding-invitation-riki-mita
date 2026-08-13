@@ -149,7 +149,7 @@ document.querySelectorAll(".reveal")
 // COUNTDOWN
 // ==============================
 
-const target = new Date("2026-08-20T08:00:00").getTime();
+const target = new Date("2026-08-23T08:00:00").getTime();
 
 setInterval(() => {
 
